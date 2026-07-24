@@ -1,0 +1,234 @@
+.plans {
+  padding: 100px 0;
+  background: var(--paper);
+}
+
+.plans__head {
+  max-width: 620px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.plans__head h2 {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  margin: 14px 0 14px;
+}
+
+.plans__head p {
+  color: var(--text-soft);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.plans__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+.plan-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 40px -20px rgba(10, 54, 96, 0.28);
+}
+
+.plan-card--highlight {
+  border-color: var(--navy);
+  background: linear-gradient(165deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: var(--white);
+  transform: scale(1.03);
+}
+
+.plan-card--highlight:hover {
+  transform: scale(1.03) translateY(-6px);
+}
+
+.plan-card__tag {
+  position: absolute;
+  top: -14px;
+  left: 30px;
+  background: var(--amber);
+  color: var(--ink);
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.plan-card__tagline {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--blue);
+  margin-bottom: 18px;
+}
+
+.plan-card--highlight .plan-card__tagline {
+  color: var(--sky);
+}
+
+.plan-card__speed {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.plan-card__speed strong {
+  font-family: var(--font-head);
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--navy);
+}
+
+.plan-card--highlight .plan-card__speed strong {
+  color: var(--white);
+}
+
+.plan-card__speed span {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-soft);
+}
+
+.plan-card--highlight .plan-card__speed span {
+  color: var(--text-on-dark);
+}
+
+.plan-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  padding: 16px 0;
+  margin-bottom: 14px;
+  border-top: 1px dashed var(--line);
+  border-bottom: 1px dashed var(--line);
+}
+
+.plan-card--highlight .plan-card__price {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.plan-card__currency {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-soft);
+}
+
+.plan-card--highlight .plan-card__currency {
+  color: var(--text-on-dark);
+}
+
+.plan-card__value {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 2.1rem;
+  color: var(--ink);
+}
+
+.plan-card--highlight .plan-card__value {
+  color: var(--white);
+}
+
+.plan-card__period {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+
+.plan-card--highlight .plan-card__period {
+  color: var(--text-on-dark);
+}
+
+.plan-card__description {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: var(--text-soft);
+  margin-bottom: 22px;
+  min-height: 62px;
+}
+
+.plan-card--highlight .plan-card__description {
+  color: var(--text-on-dark);
+}
+
+.plan-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.plan-card__features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.plan-card--highlight .plan-card__features li {
+  color: var(--white);
+}
+
+.plan-card__features li::before {
+  content: '✓';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(31, 134, 209, 0.12);
+  color: var(--blue);
+  font-size: 0.72rem;
+  flex-shrink: 0;
+}
+
+.plan-card--highlight .plan-card__features li::before {
+  background: rgba(255, 176, 32, 0.2);
+  color: var(--amber);
+}
+
+.plan-card .btn {
+  margin-top: auto;
+}
+
+.plan-card--highlight .btn-outline {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .plans__grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .plan-card--highlight {
+    transform: none;
+    order: -1;
+  }
+
+  .plan-card--highlight:hover {
+    transform: translateY(-6px);
+  }
+}

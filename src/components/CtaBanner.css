@@ -1,0 +1,70 @@
+.cta-banner {
+  background: linear-gradient(135deg, var(--blue-deep) 0%, var(--navy) 60%, var(--navy-deep) 100%);
+  padding: 72px 0;
+}
+
+.cta-banner__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.cta-banner__copy h2 {
+  color: var(--white);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  max-width: 16ch;
+  margin-bottom: 12px;
+}
+
+.cta-banner__copy p {
+  color: var(--text-on-dark);
+  max-width: 40ch;
+  line-height: 1.6;
+}
+
+.cta-banner__actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.cta-banner__phone {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-right: 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-banner__phone span {
+  font-size: 0.78rem;
+  color: var(--text-on-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.cta-banner__phone strong {
+  font-family: var(--font-head);
+  font-size: 1.4rem;
+  color: var(--white);
+}
+
+.cta-banner__buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 720px) {
+  .cta-banner__phone {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .cta-banner__actions {
+    width: 100%;
+  }
+}

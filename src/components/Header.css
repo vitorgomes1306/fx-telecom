@@ -1,0 +1,126 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 18px 0;
+  transition: padding 0.25s ease, box-shadow 0.25s ease;
+  background: rgba(244, 248, 252, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+}
+
+.site-header.is-scrolled {
+  padding: 12px 0;
+  box-shadow: 0 8px 24px -18px rgba(6, 19, 33, 0.4);
+  border-bottom-color: var(--line);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.site-header__brand img {
+  height: 40px;
+  width: auto;
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.site-header__nav ul {
+  display: flex;
+  gap: 28px;
+}
+
+.site-header__nav a {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--navy);
+}
+
+.site-header__nav ul a {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.site-header__nav ul a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--amber);
+  transition: width 0.2s ease;
+}
+
+.site-header__nav ul a:hover::after {
+  width: 100%;
+}
+
+.site-header__nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-header__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.site-header__toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+}
+
+@media (max-width: 860px) {
+  .site-header__toggle {
+    display: flex;
+  }
+
+  .site-header__nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    top: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--white);
+    padding: 96px 24px 32px;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    gap: 24px;
+  }
+
+  .site-header__nav.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .site-header__nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .site-header__nav-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
