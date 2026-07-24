@@ -1,6 +1,12 @@
+export const SITE_CONFIG = {
+  active: false,
+}
+
 export const CONTACT = {
-  phoneDisplay: '(85) 4042-3081',
-  phoneTel: '558540423081',
+  phoneDisplay: '(85) 2180-7232',
+  phoneTel: '558521807232',
+  phoneCel: '5585985500575',
+  email: 'contato@fxtelecom.com.br',
   // TODO: substitua pelo link real da central do cliente (ex: portal SGP) quando disponível.
   customerPortalUrl: '#',
 }
