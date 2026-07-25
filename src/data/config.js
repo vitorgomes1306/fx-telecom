@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  ativado: false,
+  ativado: true,
 }
 
 export const CONTACT = {
