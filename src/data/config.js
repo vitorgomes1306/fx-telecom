@@ -8,7 +8,7 @@ export const CONTACT = {
   phoneCel: '5585985500575',
   email: 'contato@fxtelecom.com.br',
   // TODO: substitua pelo link real da central do cliente (ex: portal SGP) quando disponível.
-  customerPortalUrl: '#',
+  customerPortalUrl: 'https://sistema.fxtelecom.com.br/central-assinante',
 }
 
 export const PLANS = [
