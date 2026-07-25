@@ -8,7 +8,9 @@ import SiteDisabled from './components/SiteDisabled'
 import { SITE_CONFIG } from './data/config'
 
 function App() {
-  if (!SITE_CONFIG.active) {
+  
+  // verifica se o site está ativo, caso contrário exibe a página de site desativado
+  if (!SITE_CONFIG.ativado) {
     return <SiteDisabled />
   }
 
