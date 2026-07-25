@@ -21,14 +21,16 @@
 }
 
 .plans__grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 28px;
   align-items: stretch;
 }
 
 .plan-card {
   position: relative;
+  width: calc((100% - 56px) / 3);
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius-l);
@@ -57,7 +59,9 @@
 .plan-card__tag {
   position: absolute;
   top: -14px;
-  left: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
   background: var(--amber);
   color: var(--ink);
   font-family: var(--font-head);
@@ -164,6 +168,31 @@
   min-height: 62px;
 }
 
+.plan-card__price-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: -4px 0 16px;
+  font-size: 0.75rem;
+}
+
+.plan-card__price-info strong {
+  color: var(--blue-deep);
+  font-family: var(--font-head);
+}
+
+.plan-card__price-info span {
+  color: var(--text-soft);
+}
+
+.plan-card--highlight .plan-card__price-info strong {
+  color: var(--sky);
+}
+
+.plan-card--highlight .plan-card__price-info span {
+  color: var(--text-on-dark);
+}
+
 .plan-card--highlight .plan-card__description {
   color: var(--text-on-dark);
 }
@@ -211,6 +240,42 @@
   margin-top: auto;
 }
 
+.plan-card__streaming {
+  margin: -4px 0 24px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--paper);
+}
+
+.plan-card__streaming > span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--navy);
+  font-family: var(--font-head);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.plan-card__streaming-logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 12px;
+}
+
+.plan-card__streaming-logos img {
+  width: 56px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.plan-card__streaming-logos img:first-child {
+  width: 42px;
+}
+
 .plan-card--highlight .btn-outline {
   border-color: rgba(255, 255, 255, 0.55);
   color: var(--white);
@@ -218,9 +283,12 @@
 
 @media (max-width: 900px) {
   .plans__grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
+    max-width: 720px;
     margin: 0 auto;
+  }
+
+  .plan-card {
+    width: calc((100% - 28px) / 2);
   }
 
   .plan-card--highlight {
@@ -230,5 +298,11 @@
 
   .plan-card--highlight:hover {
     transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 620px) {
+  .plan-card {
+    width: 100%;
   }
 }

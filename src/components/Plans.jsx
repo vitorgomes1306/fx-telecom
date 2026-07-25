@@ -1,5 +1,14 @@
 import { CONTACT, PLANS } from '../data/config'
+import appleLogo from '../assets/logo_apple.png'
+import hboLogo from '../assets/HBO_logo.svg'
+import disneyLogo from '../assets/logo_disney.svg'
 import './Plans.css'
+
+const STREAMING_SERVICES = [
+  { name: 'Apple TV+', logo: appleLogo },
+  { name: 'HBO Max', logo: hboLogo },
+  { name: 'Disney+', logo: disneyLogo },
+]
 
 function Plans() {
   return (
@@ -21,7 +30,7 @@ function Plans() {
               className={`plan-card ${plan.highlight ? 'plan-card--highlight' : ''}`}
             >
               {plan.highlight && (
-                <span className="plan-card__tag">Mais escolhido</span>
+                <span className="plan-card__tag">{plan.badge}</span>
               )}
 
               <p className="plan-card__tagline">{plan.tagline}</p>
@@ -37,13 +46,39 @@ function Plans() {
                 <span className="plan-card__period">/mês</span>
               </div>
 
+              {plan.priceAfterDue && (
+                <div className="plan-card__price-info">
+                  <strong>Preço com pontualidade</strong>
+                  <span>
+                    Após o vencimento: R$ {plan.priceAfterDue}/mês
+                  </span>
+                </div>
+              )}
+
               <p className="plan-card__description">{plan.description}</p>
 
               <ul className="plan-card__features">
                 <li>Instalação grátis</li>
                 <li>Suporte 24 horas</li>
                 <li>100% fibra óptica</li>
+                {plan.wifi6 && <li>Wi-Fi 6 incluso</li>}
               </ul>
+
+              {plan.streaming && (
+                <div className="plan-card__streaming">
+                  <span>{plan.streaming}</span>
+                  <div className="plan-card__streaming-logos">
+                    {STREAMING_SERVICES.map((service) => (
+                      <img
+                        src={service.logo}
+                        alt={service.name}
+                        title={service.name}
+                        key={service.name}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <a
                 href={`tel:${CONTACT.phoneTel}`}

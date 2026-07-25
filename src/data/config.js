@@ -13,30 +13,55 @@ export const CONTACT = {
 
 export const PLANS = [
   {
-    id: 'mega-500',
-    speed: '500',
-    price: '89,90',
+    id: 'mega-100',
+    speed: '100',
+    price: '79,90',
     tagline: 'Para o dia a dia sem travar',
     description:
       'Redes sociais, streaming e reuniões online rodando liso, sem fila de espera.',
     highlight: false,
   },
   {
-    id: 'mega-700',
-    speed: '700',
+    id: 'mega-600',
+    speed: '600',
     price: '99,90',
+    tagline: 'Performance e alcance',
+    description:
+      'Mais velocidade e Wi-Fi 6 para conectar toda a casa com alto desempenho.',
+    wifi6: true,
+    badge: 'O mais pedido',
+    highlight: true,
+  },
+  {
+    id: 'mega-300',
+    speed: '300',
+    price: '89,90',
     tagline: 'A escolha da maioria',
     description:
       'Ideal para casas com vários dispositivos e várias pessoas conectadas ao mesmo tempo.',
-    highlight: true,
+    highlight: false,
+  },
+  {
+    id: 'mega-700',
+    speed: '700',
+    price: '109,90',
+    priceAfterDue: '119,90',
+    tagline: 'Diversão para toda a família',
+    description:
+      'Ultravelocidade, Wi-Fi 6 e streaming premium com anúncios.',
+    wifi6: true,
+    streaming: 'Streaming com anúncios (Premium)',
+    highlight: false,
   },
   {
     id: 'mega-800',
     speed: '800',
-    price: '110,90',
-    tagline: 'Performance máxima',
+    price: '139,90',
+    priceAfterDue: '149,90',
+    tagline: 'Entretenimento sem interrupções',
     description:
-      'Para quem joga online, transmite e trabalha em casa sem abrir mão de velocidade.',
+      'Máxima velocidade e streaming premium sem anúncios.',
+    streaming: 'Streaming sem anúncios',
     highlight: false,
   },
 ]
