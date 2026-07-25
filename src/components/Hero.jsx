@@ -39,7 +39,7 @@ function Hero() {
             <a href="#planos" className="btn btn-primary">
               Assinar agora
             </a>
-            <a href={CONTACT.customerPortalUrl} className="btn btn-outline">
+            <a href={CONTACT.customerPortalUrl} className="btn btn-outline-light btn-central-cliente" id='central-cliente-link'>
               Central do Cliente
             </a>
           </div>

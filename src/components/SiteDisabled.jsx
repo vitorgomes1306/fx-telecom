@@ -1,14 +1,20 @@
-import logo from '../assets/fx-logo.png'
-import { CONTACT } from '../data/config'
-import './SiteDisabled.css'
+import logo from "../assets/fx-logo.png";
+import { CONTACT } from "../data/config";
+import "./SiteDisabled.css";
+import "tippy.js/dist/tippy.css";
 
+import logoAltersoft from "../assets/altersoft_logo_light.png";
+import Tippy from "@tippyjs/react";
 function SiteDisabled() {
   return (
     <main className="site-disabled">
       <div className="site-disabled__glow site-disabled__glow--top" />
       <div className="site-disabled__glow site-disabled__glow--bottom" />
 
-      <section className="site-disabled__card" aria-labelledby="site-disabled-title">
+      <section
+        className="site-disabled__card"
+        aria-labelledby="site-disabled-title"
+      >
         <img className="site-disabled__logo" src={logo} alt="FX Telecom" />
 
         <div className="site-disabled__icon" aria-hidden="true">
@@ -28,13 +34,43 @@ function SiteDisabled() {
         >
           Ligue {CONTACT.phoneDisplay}
         </a>
+        <br />
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "6px",
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "Nunito, sans-serif",
+              fontSize: "15px",
+              fontWeight: 400,
+              color: "#999999",
+            }}
+          >
+            Desenvolvido por
+          </span>
+          <Tippy
+            content="Fábrica de Softwares (85) 99445.4472"
+            placement="top"
+            arrow={true}
+            delay={[200, 0]}
+            animation="shift-away"
+          >
+            <a
+              href="https://altersoft.dev.br"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={logoAltersoft} alt="Altersoft" width={100} />
+            </a>
+          </Tippy>
+        </div>
       </section>
-
-      <p className="site-disabled__footer">
-        FX Telecom · Conectando você ao que importa
-      </p>
     </main>
-  )
+  );
 }
 
-export default SiteDisabled
+export default SiteDisabled;

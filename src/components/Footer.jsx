@@ -1,6 +1,8 @@
 import logo from '../assets/fx-logo.png'
 import { CONTACT } from '../data/config'
 import './Footer.css'
+import logoAltersoft from '../assets/altersoft.png'
+import Tippy from '@tippyjs/react'
 
 function Footer() {
   const year = new Date().getFullYear()
@@ -48,8 +50,32 @@ function Footer() {
 
       <div className="site-footer__bottom">
         <div className="container site-footer__bottom-inner">
-          <span>© {year} FX Telecom. Todos os direitos reservados.</span>
-          <span>Fazendo a diferença.</span>
+          <span>© {year} FX Telecom. Todos os direitos reservados | Fazendo a diferença.</span>
+          <span
+            style={{
+              fontFamily: "Nunito, sans-serif",
+              fontSize: "15px",
+              fontWeight: 400,
+              color: "#999999",
+            }}
+          >
+          
+          </span>
+          <Tippy
+            content="Fábrica de Softwares (85) 99445.4472"
+            placement="top"
+            arrow={true}
+            delay={[200, 0]}
+            animation="shift-away"
+          >
+            <a
+              href="https://altersoft.dev.br"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={logoAltersoft} alt="Altersoft" width={80} />
+            </a>
+          </Tippy>
         </div>
       </div>
     </footer>

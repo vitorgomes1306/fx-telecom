@@ -73,6 +73,19 @@
   margin: 32px 0 28px;
 }
 
+.btn-central-cliente {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--sky);
+  color: var(--white);
+  backdrop-filter: blur(4px);
+}
+
+.btn-central-cliente:hover {
+  background: var(--sky);
+  border-color: var(--sky);
+  color: var(--navy-deep);
+}
+
 .hero__badges {
   display: flex;
   flex-wrap: wrap;
