@@ -1,7 +1,7 @@
-import { CONTACT } from '../data/config'
-import './Hero.css'
+import { CONTACT } from "../data/config";
+import "./Hero.css";
 
-const BADGES = ['Instalação Grátis', 'Suporte 24h', '100% Fibra Óptica']
+const BADGES = ["Instalação Grátis", "Suporte 24h", "100% Fibra Óptica"];
 
 function Hero() {
   return (
@@ -25,21 +25,28 @@ function Hero() {
 
       <div className="container hero__inner">
         <div className="hero__copy">
-          <span className="eyebrow">Fibra óptica em Fortaleza</span>
-          <h1>
-            Internet rápida de verdade, direto no seu bairro
-          </h1>
+          <span className="eyebrow">Fibra óptica até você</span>
+          <h1>Internet rápida de verdade, direto no seu bairro</h1>
           <p className="hero__lead">
-            A FX Telecom leva fibra óptica de ponta a ponta até sua casa, com
-            instalação gratuita e suporte disponível 24 horas por dia.
-            Chega de conexão que trava na hora que você mais precisa.
+            Internet de verdade é com a FX Telecom! 
+            <br /><br />
+            Fibra óptica de ponta a
+            ponta para sua casa ou empresa, com alta velocidade, instalação
+            rápida e suporte técnico humanizado. 
+            <br /><br />  
+            Chega de internet que trava.
+            Escolha a estabilidade e a confiança da FX Telecom.
           </p>
 
           <div className="hero__actions">
             <a href="#planos" className="btn btn-primary">
               Assinar agora
             </a>
-            <a href={CONTACT.customerPortalUrl} className="btn btn-outline-light btn-central-cliente" id='central-cliente-link'>
+            <a
+              href={CONTACT.customerPortalUrl}
+              className="btn btn-outline-light btn-central-cliente"
+              id="central-cliente-link"
+            >
               Central do Cliente
             </a>
           </div>
@@ -75,14 +82,10 @@ function Hero() {
             <strong>24h</strong>
             <span>Suporte todos os dias</span>
           </div>
-          <div className="hero__floating hero__floating--2">
-            <strong>R$ 0</strong>
-            <span>Instalação grátis</span>
-          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

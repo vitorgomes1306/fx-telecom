@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react'
 import logo from '../assets/fx-logo.png'
 import { CONTACT } from '../data/config'
 import './Header.css'
+import { Building2 } from 'lucide-react'
 
 const NAV_LINKS = [
-  { label: 'Planos', href: '#planos' },
-  { label: 'Por que a FX', href: '#vantagens' },
-  { label: 'Contato', href: '#contato' },
+  { label: 'Planos', href: '/#planos' },
+  { label: 'Empresas', href: '/empresas' },
+  { label: 'Por que a FX', href: '/#vantagens' },
+  { label: 'Contato', href: '/#contato' },
 ]
 
 function Header() {
@@ -23,7 +25,7 @@ function Header() {
   return (
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="container site-header__inner">
-        <a href="#topo" className="site-header__brand">
+        <a href="/#topo" className="site-header__brand">
           <img src={logo} alt="FX Telecom" />
         </a>
 
@@ -44,8 +46,17 @@ function Header() {
             >
               Central do Cliente
             </a>
-            <a href="#planos" className="btn btn-primary btn-sm">
+            <a href="/#planos" className="btn btn-primary btn-sm">
               Assinar Agora
+            </a>
+
+            <a
+              href="/empresas"
+              className="btn btn-outline-light btn-central-cliente"
+              id="central-cliente-link"
+            >
+              <Building2 aria-hidden="true" />
+              Planos corporativos
             </a>
           </div>
         </nav>

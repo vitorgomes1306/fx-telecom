@@ -2,7 +2,6 @@ import logo from '../assets/fx-logo.png'
 import { CONTACT } from '../data/config'
 import './Footer.css'
 import logoAltersoft from '../assets/altersoft.png'
-import Tippy from '@tippyjs/react'
 
 function Footer() {
   const year = new Date().getFullYear()
@@ -24,13 +23,13 @@ function Footer() {
           <h4>Navegação</h4>
           <ul>
             <li>
-              <a href="#planos">Planos</a>
+              <a href="/#planos">Planos</a>
             </li>
             <li>
-              <a href="#vantagens">Por que a FX</a>
+              <a href="/#vantagens">Por que a FX</a>
             </li>
             <li>
-              <a href="#contato">Contato</a>
+              <a href="/#contato">Contato</a>
             </li>
           </ul>
         </div>
@@ -61,21 +60,15 @@ function Footer() {
           >
           
           </span>
-          <Tippy
-            content="Fábrica de Softwares (85) 99445.4472"
-            placement="top"
-            arrow={true}
-            delay={[200, 0]}
-            animation="shift-away"
+          <a
+            href="https://altersoft.dev.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Fábrica de Softwares (85) 99445-4472"
+            aria-label="Altersoft — Fábrica de Softwares"
           >
-            <a
-              href="https://altersoft.dev.br"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={logoAltersoft} alt="Altersoft" width={80} />
-            </a>
-          </Tippy>
+            <img src={logoAltersoft} alt="Altersoft" width={80} />
+          </a>
         </div>
       </div>
     </footer>

@@ -52,7 +52,7 @@ export const FEATURES = [
     description: 'Você assina hoje e a equipe técnica leva a fibra até sua casa sem custo.',
   },
   {
-    title: 'Suporte 24 Horas',
+    title: 'Suporte técnico rápido',
     description: 'Time de suporte de plantão todos os dias, a qualquer hora, para resolver.',
   },
   {

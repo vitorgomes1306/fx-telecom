@@ -1,10 +1,8 @@
 import logo from "../assets/fx-logo.png";
 import { CONTACT } from "../data/config";
 import "./SiteDisabled.css";
-import "tippy.js/dist/tippy.css";
 
 import logoAltersoft from "../assets/altersoft_logo_light.png";
-import Tippy from "@tippyjs/react";
 function SiteDisabled() {
   return (
     <main className="site-disabled">
@@ -52,21 +50,15 @@ function SiteDisabled() {
           >
             Desenvolvido por
           </span>
-          <Tippy
-            content="Fábrica de Softwares (85) 99445.4472"
-            placement="top"
-            arrow={true}
-            delay={[200, 0]}
-            animation="shift-away"
+          <a
+            href="https://altersoft.dev.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Fábrica de Softwares (85) 99445-4472"
+            aria-label="Altersoft — Fábrica de Softwares"
           >
-            <a
-              href="https://altersoft.dev.br"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={logoAltersoft} alt="Altersoft" width={100} />
-            </a>
-          </Tippy>
+            <img src={logoAltersoft} alt="Altersoft" width={100} />
+          </a>
         </div>
       </section>
     </main>
