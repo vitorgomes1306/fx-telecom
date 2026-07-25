@@ -1,9 +1,9 @@
 import worksImage from '../assets/works.png'
-import logo from '../assets/fx-logo.png'
 import './Corporation.css'
+import { CONTACT } from '../data/config'
 
 const WHATSAPP_URL =
-  'https://api.whatsapp.com/send?phone=5585982095005&text=Falar%20com%20Atendente%20'
+  `https://api.whatsapp.com/send?phone=${CONTACT.phoneCel}&text=Falar sobre plano empresarial FX Telecom`
 
 const CORPORATE_PLANS = [
   { speed: '200', unit: 'FULL', price: '600,00' },
@@ -20,14 +20,20 @@ const PLAN_FEATURES = [
   'Suporte Exclusivo',
 ]
 
-const COMPANIES = [
-  'NorteLog',
-  'CearáTech',
-  'Vértice Group',
-  'Atlântico Hub',
-  'Nova Gestão',
-  'Ponto Forte',
-]
+const COMPANY_LOGOS = Object.entries(
+  import.meta.glob('../assets/clientes/*.jpeg', {
+    eager: true,
+    import: 'default',
+  }),
+)
+  .sort(([firstPath], [secondPath]) =>
+    firstPath.localeCompare(secondPath, undefined, { numeric: true }),
+  )
+  .map(([path, image], index) => ({
+    id: path,
+    image,
+    name: `Empresa cliente ${index + 1}`,
+  }))
 
 const DIFFERENTIALS = [
   {
@@ -51,14 +57,17 @@ const DIFFERENTIALS = [
 ]
 
 function CompanyItems({ duplicate = false }) {
-  return COMPANIES.map((company) => (
+  return COMPANY_LOGOS.map((company) => (
     <div
       className="corporation-company"
-      key={`${company}-${duplicate ? 'duplicate' : 'original'}`}
+      key={`${company.id}-${duplicate ? 'duplicate' : 'original'}`}
       aria-hidden={duplicate || undefined}
     >
-      <img src={logo} alt={duplicate ? '' : company} />
-      <span>{company}</span>
+      <img
+        src={company.image}
+        alt={duplicate ? '' : company.name}
+        loading="lazy"
+      />
     </div>
   ))
 }

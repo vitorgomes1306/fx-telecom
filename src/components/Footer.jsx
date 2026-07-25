@@ -39,9 +39,15 @@ function Footer() {
           <ul>
             <li>
               <a href={`tel:${CONTACT.phoneTel}`}>{CONTACT.phoneDisplay}</a>
-            </li>
+                          </li>
+            
             <li>
-              <a href={CONTACT.customerPortalUrl}>Central do Cliente</a>
+              <a mailto={CONTACT.email}
+              onMouseMove={() => {
+                window.location.href = `mailto:${CONTACT.email}`;
+              }}
+              
+              >{CONTACT.email}</a>
             </li>
           </ul>
         </div>
