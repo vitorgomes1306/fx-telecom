@@ -71,6 +71,12 @@
   gap: 12px;
 }
 
+.btn-corporation svg {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
 .site-header__toggle {
   display: none;
   flex-direction: column;
