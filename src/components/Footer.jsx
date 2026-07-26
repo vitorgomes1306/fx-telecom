@@ -1,10 +1,12 @@
-import logo from '../assets/fx-logo.png'
-import { CONTACT } from '../data/config'
-import './Footer.css'
-import logoAltersoft from '../assets/altersoft.png'
+import logo from "../assets/fx-logo.png";
+import { CONTACT } from "../data/config";
+import "./Footer.css";
+import logoAltersoft from "../assets/altersoft.png";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css";
 
 function Footer() {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
 
   return (
     <footer className="site-footer">
@@ -14,8 +16,8 @@ function Footer() {
             <img src={logo} alt="FX Telecom" />
           </span>
           <p>
-            Provedor de internet fibra óptica atuando em bairros de
-            Fortaleza — instalação gratuita e suporte 24 horas.
+            Provedor de internet fibra óptica atuando em bairros de Fortaleza —
+            instalação gratuita e suporte 24 horas.
           </p>
         </div>
 
@@ -39,15 +41,17 @@ function Footer() {
           <ul>
             <li>
               <a href={`tel:${CONTACT.phoneTel}`}>{CONTACT.phoneDisplay}</a>
-                          </li>
-            
+            </li>
+
             <li>
-              <a mailto={CONTACT.email}
-              onMouseMove={() => {
-                window.location.href = `mailto:${CONTACT.email}`;
-              }}
-              
-              >{CONTACT.email}</a>
+              <a
+                mailto={CONTACT.email}
+                onMouseMove={() => {
+                  window.location.href = `mailto:${CONTACT.email}`;
+                }}
+              >
+                {CONTACT.email}
+              </a>
             </li>
           </ul>
         </div>
@@ -55,7 +59,10 @@ function Footer() {
 
       <div className="site-footer__bottom">
         <div className="container site-footer__bottom-inner">
-          <span>© {year} FX Telecom. Todos os direitos reservados | Fazendo a diferença.</span>
+          <span>
+            © {year} FX Telecom. Todos os direitos reservados | Fazendo a
+            diferença.
+          </span>
           <span
             style={{
               fontFamily: "Nunito, sans-serif",
@@ -63,22 +70,24 @@ function Footer() {
               fontWeight: 400,
               color: "#999999",
             }}
+          ></span>
+          <Tippy
+            content="Fábrica de Softwares (85) 99445-4472"
+            placement="top"
           >
-          
-          </span>
-          <a
-            href="https://altersoft.dev.br"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Fábrica de Softwares (85) 99445-4472"
-            aria-label="Altersoft — Fábrica de Softwares"
-          >
-            <img src={logoAltersoft} alt="Altersoft" width={80} />
-          </a>
+            <a
+              href="https://altersoft.dev.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Altersoft — Fábrica de Softwares"
+            >
+              <img src={logoAltersoft} alt="Altersoft" width={80} />
+            </a>
+          </Tippy>
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
