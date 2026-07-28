@@ -9,7 +9,7 @@ function CtaBanner() {
           <h2>Pronto para navegar sem travar?</h2>
           <p>
             Fale com a nossa equipe agora e leve fibra óptica de verdade para
-            sua casa, com instalação gratuita.
+            sua casa, com instalação rápida.
           </p>
         </div>
 

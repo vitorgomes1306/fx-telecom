@@ -17,7 +17,7 @@ function Footer() {
           </span>
           <p>
             Provedor de internet fibra óptica atuando em bairros de Fortaleza —
-            instalação gratuita e suporte 24 horas.
+            instalação rápida e suporte 24 horas.
           </p>
         </div>
 

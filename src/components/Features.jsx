@@ -13,7 +13,7 @@ const ICONS = {
       />
     </svg>
   ),
-  'Instalação Grátis': (
+  'Instalação rápida': (
     <svg viewBox="0 0 24 24" fill="none">
       <path
         d="M4 20V10l8-6 8 6v10"

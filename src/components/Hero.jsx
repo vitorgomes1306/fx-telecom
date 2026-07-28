@@ -1,7 +1,7 @@
 import { CONTACT } from "../data/config";
 import "./Hero.css";
 
-const BADGES = ["Instalação Grátis", "Suporte 24h", "100% Fibra Óptica"];
+const BADGES = ["Instalação Rápida", "Suporte 24h", "100% Fibra Óptica"];
 
 function Hero() {
   return (

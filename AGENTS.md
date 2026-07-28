@@ -1,13 +1,13 @@
 <claude-mem-context>
 # Memory Context
 
-# [fxtelecom-site] recent context, 2026-07-26 9:07am GMT-3
+# [fxtelecom-site] recent context, 2026-07-28 9:46am GMT-3
 
 Legend: 🎯session 🔴bugfix 🟣feature 🔄refactor ✅change 🔵discovery ⚖️decision 🚨security_alert 🔐security_note
 Format: ID TIME TYPE TITLE
 Fetch details: get_observations([IDs]) | Search: mem-search skill
 
-Stats: 14 obs (4,750t read) | 1,060,288t work | 100% savings
+Stats: 17 obs (5,726t read) | 1,075,781t work | 99% savings
 
 ### Jul 24, 2026
 1518 11:32a 🔵 FX Telecom Landing Page Project Initialized
@@ -25,6 +25,10 @@ Stats: 14 obs (4,750t read) | 1,060,288t work | 100% savings
 1529 " ⚖️ Corporation Removed from App.jsx — Will Become Separate Page
 1530 11:53a 🔵 Vercel 404 on /empresas — SPA Routing Not Configured
 1531 11:59a 🔴 Vercel 404 on /empresas Fixed via vercel.json SPA Rewrite
+### Jul 28, 2026
+1532 9:41a 🔵 GloboPlay Streaming Shown on Both mega-700 and mega-800 Plans
+1533 " 🟣 GloboPlay Logo Restricted to mega-800 Plan Only
+1534 9:42a 🔴 Plans.jsx Build Verified After GloboPlay Restriction and Feature List Text Fix
 
-Access 1060k tokens of past work via get_observations([IDs]) or mem-search skill.
+Access 1076k tokens of past work via get_observations([IDs]) or mem-search skill.
 </claude-mem-context>

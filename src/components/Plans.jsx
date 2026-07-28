@@ -2,12 +2,14 @@ import { CONTACT, PLANS } from '../data/config'
 import appleLogo from '../assets/logo_apple.png'
 import hboLogo from '../assets/HBO_logo.svg'
 import disneyLogo from '../assets/logo_disney.svg'
+import globoPlayLogo from '../assets/globoPlayLogo.svg'
 import './Plans.css'
 
 const STREAMING_SERVICES = [
   { name: 'Apple TV+', logo: appleLogo },
-  { name: 'HBO Max', logo: hboLogo },
+  { name: 'HBO Max', logo: hboLogo, excludedPlanIds: ['mega-800'] },
   { name: 'Disney+', logo: disneyLogo },
+  { name: 'GloboPlay', logo: globoPlayLogo, planIds: ['mega-800'] },
 ]
 
 function Plans() {
@@ -58,7 +60,7 @@ function Plans() {
               <p className="plan-card__description">{plan.description}</p>
 
               <ul className="plan-card__features">
-                <li>Instalação grátis</li>
+                <li>Instalação rápida</li>
                 <li>Suporte 24 horas</li>
                 <li>100% fibra óptica</li>
                 {plan.wifi6 && <li>Wi-Fi 6 incluso</li>}
@@ -68,7 +70,11 @@ function Plans() {
                 <div className="plan-card__streaming">
                   <span>{plan.streaming}</span>
                   <div className="plan-card__streaming-logos">
-                    {STREAMING_SERVICES.map((service) => (
+                    {STREAMING_SERVICES.filter(
+                      (service) =>
+                        (!service.planIds || service.planIds.includes(plan.id)) &&
+                        !service.excludedPlanIds?.includes(plan.id),
+                    ).map((service) => (
                       <img
                         src={service.logo}
                         alt={service.name}

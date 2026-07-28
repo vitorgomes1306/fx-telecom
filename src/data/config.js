@@ -30,6 +30,7 @@ export const PLANS = [
       'Mais velocidade e Wi-Fi 6 para conectar toda a casa com alto desempenho.',
     wifi6: true,
     badge: 'O mais pedido',
+    // plano destaque
     highlight: true,
   },
   {
@@ -50,8 +51,9 @@ export const PLANS = [
     description:
       'Ultravelocidade, Wi-Fi 6 e streaming premium com anúncios.',
     wifi6: true,
-    streaming: 'Streaming com anúncios (Premium)',
-    highlight: false,
+    streaming: '1 Streaming com anúncios',
+    highlight: true,
+    badge: 'Ideal pra família toda',
   },
   {
     id: 'mega-800',
@@ -61,8 +63,9 @@ export const PLANS = [
     tagline: 'Entretenimento sem interrupções',
     description:
       'Máxima velocidade e streaming premium sem anúncios.',
-    streaming: 'Streaming sem anúncios',
+    streaming: '1 Streaming sem anúncios',
     highlight: false,
+    wifi6: true,
   },
 ]
 
@@ -73,7 +76,7 @@ export const FEATURES = [
       'Sinal estável do início ao fim, sem oscilar em horário de pico.',
   },
   {
-    title: 'Instalação Grátis',
+    title: 'Instalação Rápida',
     description: 'Você assina hoje e a equipe técnica leva a fibra até sua casa sem custo.',
   },
   {
