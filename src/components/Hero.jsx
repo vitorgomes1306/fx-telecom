@@ -26,7 +26,7 @@ function Hero() {
       <div className="container hero__inner">
         <div className="hero__copy">
           <span className="eyebrow">Fibra óptica até você</span>
-          <h1>Internet rápida de verdade, direto no seu bairro</h1>
+          <h1>Internet rápida de verdade</h1>
           <p className="hero__lead">
             Internet de verdade é com a FX Telecom! 
             <br /><br />
