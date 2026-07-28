@@ -1,4 +1,5 @@
 export const SITE_CONFIG = {
+  // Habilita ou desabilita o site
   ativado: true,
 }
 
@@ -7,7 +8,7 @@ export const CONTACT = {
   phoneTel: '558521807232',
   phoneCel: '5585985500575',
   email: 'contato@fxtelecom.com.br',
-  // TODO: substitua pelo link real da central do cliente (ex: portal SGP) quando disponível.
+  // Link da central do assinante
   customerPortalUrl: 'https://sistema.fxtelecom.com.br/central-assinante',
 }
 
@@ -32,6 +33,7 @@ export const PLANS = [
     badge: 'O mais pedido',
     // plano destaque
     highlight: true,
+    highlightTheme: 'navy',
   },
   {
     id: 'mega-300',
@@ -53,6 +55,7 @@ export const PLANS = [
     wifi6: true,
     streaming: '1 Streaming com anúncios',
     highlight: true,
+    highlightTheme: 'red',
     badge: 'Ideal pra família toda',
   },
   {

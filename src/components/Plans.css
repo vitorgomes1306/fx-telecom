@@ -46,10 +46,39 @@
 }
 
 .plan-card--highlight {
-  border-color: var(--navy);
-  background: linear-gradient(165deg, var(--navy) 0%, var(--navy-deep) 100%);
+  border-color: var(--plan-highlight-start);
+  background: linear-gradient(
+    165deg,
+    var(--plan-highlight-start) 0%,
+    var(--plan-highlight-end) 100%
+  );
   color: var(--white);
   transform: scale(1.03);
+}
+
+.plan-card--navy {
+  --plan-highlight-start: var(--navy);
+  --plan-highlight-end: var(--navy-deep);
+}
+
+.plan-card--blue {
+  --plan-highlight-start: var(--blue);
+  --plan-highlight-end: var(--blue-deep);
+}
+
+.plan-card--orange {
+  --plan-highlight-start: #e66a0a;
+  --plan-highlight-end: #9c3d06;
+}
+
+.plan-card--red {
+  --plan-highlight-start: #d93636;
+  --plan-highlight-end: #8f1717;
+}
+
+.plan-card--green {
+  --plan-highlight-start: #218754;
+  --plan-highlight-end: #105c37;
 }
 
 .plan-card--highlight:hover {

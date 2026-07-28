@@ -21,7 +21,7 @@ function Plans() {
           <h2>Escolha a velocidade certa para sua casa</h2>
           <p>
             Todos os planos rodam em fibra óptica 100%, com instalação
-            gratuita e suporte 24 horas incluídos — sem letras miúdas.
+            rápida e suporte 24 horas incluídos — sem letras miúdas.
           </p>
         </div>
 
@@ -29,7 +29,11 @@ function Plans() {
           {PLANS.map((plan) => (
             <article
               key={plan.id}
-              className={`plan-card ${plan.highlight ? 'plan-card--highlight' : ''}`}
+              className={`plan-card ${
+                plan.highlight
+                  ? `plan-card--highlight plan-card--${plan.highlightTheme || 'navy'}`
+                  : ''
+              }`}
             >
               {plan.highlight && (
                 <span className="plan-card__tag">{plan.badge}</span>
