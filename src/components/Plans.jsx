@@ -6,8 +6,8 @@ import globoPlayLogo from '../assets/globoPlayLogo.svg'
 import './Plans.css'
 
 const STREAMING_SERVICES = [
-  { name: 'Apple TV+', logo: appleLogo },
-  { name: 'HBO Max', logo: hboLogo, excludedPlanIds: ['mega-800'] },
+  { name: 'Apple TV+', logo: appleLogo, excludedPlanIds: ['mega-800'] },
+  { name: 'HBO Max', logo: hboLogo },
   { name: 'Disney+', logo: disneyLogo },
   { name: 'GloboPlay', logo: globoPlayLogo, planIds: ['mega-800'] },
 ]
