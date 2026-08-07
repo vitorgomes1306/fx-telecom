@@ -91,7 +91,7 @@ function Plans() {
               )}
 
               <a
-                href={`tel:${CONTACT.phoneTel}`}
+                href={`https://wa.me/${CONTACT.phoneTel}?text=Ol%C3%A1%2C%20gostaria%20de%20assinar%20o%20plano%20${plan.speed}%20MEGA%20da%20Fx Telecom.`}
                 className={`btn btn-block ${plan.highlight ? 'btn-primary' : 'btn-outline'}`}
               >
                 Assinar agora

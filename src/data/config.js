@@ -51,7 +51,7 @@ export const PLANS = [
     priceAfterDue: '119,90',
     tagline: 'Diversão para toda a família',
     description:
-      'Ultravelocidade, Wi-Fi 6 e streaming premium com anúncios.',
+      'Ultravelocidade, Wi-Fi 6 e streaming com anúncios.',
     wifi6: true,
     streaming: '1 Streaming com anúncios',
     highlight: true,
